@@ -13,7 +13,8 @@ For example:
     chunk(input, 2) // should return [ [1,2,3,4,5], [6,7,8,9,10] ]
     `</pre>
 
-    The tricky part is when the number of chunks doesn't divide evenly into the size of the 
+The tricky part is when the number of chunks doesn't divide evenly into the size of the 
+    
     array. Take the following examples:<pre>`var input = [1,2,3,4,5,6,7,8,9,10];
     chunk(input, 3) // should return [ [1,2,3,4], [5,6,7], [8,9,10] ]
     chunk(input, 7) // should return [ [1,2], [3,4], [5,6], [7], [8], [9], [10] ]
@@ -34,4 +35,3 @@ Create a user interface that visualizes organizing people into evenly sized grou
 user to specify the number of people to start with and the number of groups to make. Use the
 chunk function to perform the groupings, and add the necessary DOM manipulation to render
 the groups.
-</div></div>
