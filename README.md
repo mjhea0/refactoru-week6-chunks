@@ -21,7 +21,6 @@ The tricky part is when the number of chunks doesn't divide evenly into the size
 In the above examples, the inner arrays (chunks) are larger at the beginning of the array
 than at the end, as if you were trying to make all chunks as close to the same size as 
 possible while keeping the bigger chunks at the beginning.
-<div class="space-children-3"><div class="part">
 
 ### Requirements
 
