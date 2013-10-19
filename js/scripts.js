@@ -2,22 +2,24 @@ function chunk(array,size) {
   var mid = (array.length/size); var chunks = []; var start = 0
   for(var i=0; i<size; i++) {
     var last = Math.floor(start+mid)
-    console.log(last)
     if (array.length%size <= i) last = last-1
     chunks.push(array.slice(start,Math.floor(last+1)))
     start = Math.floor(last+1)
   }
-  return chunks
+  return JSON.stringify(chunks)
 }
 
 var input = [1,2,3,4,5,6,7,8,9,10];
-console.log(chunk(input, 2)) // should return [ [1,2,3,4,5], [6,7,8,9,10] ]
-console.log(chunk(input, 3)) // should return [ [1,2,3,4], [5,6,7], [8,9,10] ]
-console.log(chunk(input, 7)) // should return [ [1,2], [3,4], [5,6], [7], [8], [9], [10] ]
+console.log(JSON.stringify(chunk(input, 2))) // should return [[1,2,3,4,5],[6,7,8,9,10]]
+console.log(JSON.stringify(chunk(input, 3))) // should return [[1,2,3,4],[5,6,7],[8,9,10]]
+console.log(JSON.stringify(chunk(input, 4))) // should return [[1,2,3],[4,5,6],[7,8],[9,10]]
+console.log(JSON.stringify(chunk(input, 7))) // should return [[1,2],[3,4],[5,6],[7],[8],[9],[10]]
+console.log(JSON.stringify(chunk(input, 8))) // should return [[1,2],[3,4],[5],[6],[7],[8],[9],[10]]
 
-////////////////////////////////////////////////////
-////         Example - chunk(input, 3)         ////
-//////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////
+////         Example - chunk([1,2,3,4,5,6,7,8,9,10], 3)         ////
+///////////////////////////////////////////////////////////////////
 
 /// variables
 // mid = 3.3333333333333335, chunks = [], start = 0
@@ -43,4 +45,4 @@ console.log(chunk(input, 7)) // should return [ [1,2], [3,4], [5,6], [7], [8], [
 // array.slice(8,11) = [8, 9, 10] => THIRD CHUNK !!!
 // start = 11
 
-//// [ [1,2,3,4], [5,6,7], [8,9,10] ]
+//// [[1,2,3,4],[5,6,7],[8,9,10]]
