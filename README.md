@@ -11,11 +11,10 @@ For example:
 
     var input = [1,2,3,4,5,6,7,8,9,10];
     chunk(input, 2) // should return [ [1,2,3,4,5], [6,7,8,9,10] ]
-    `</pre>
 
-The tricky part is when the number of chunks doesn't divide evenly into the size of the 
+The tricky part is when the number of chunks doesn't divide evenly into the size of the array. Take the following examples:
     
-    array. Take the following examples:<pre>`var input = [1,2,3,4,5,6,7,8,9,10];
+    var input = [1,2,3,4,5,6,7,8,9,10];
     chunk(input, 3) // should return [ [1,2,3,4], [5,6,7], [8,9,10] ]
     chunk(input, 7) // should return [ [1,2], [3,4], [5,6], [7], [8], [9], [10] ]
 
