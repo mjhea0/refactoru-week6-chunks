@@ -5,16 +5,16 @@ function chunk(array,size) {
     if (array.length%size <= i) last = last-1
     chunks.push(array.slice(start,Math.floor(last+1)))
     start = Math.floor(last+1)
-  }
-  return JSON.stringify(chunks)
+	}
+  return chunks
 }
 
 var input = [1,2,3,4,5,6,7,8,9,10];
-console.log(JSON.stringify(chunk(input, 2))) // should return [[1,2,3,4,5],[6,7,8,9,10]]
-console.log(JSON.stringify(chunk(input, 3))) // should return [[1,2,3,4],[5,6,7],[8,9,10]]
-console.log(JSON.stringify(chunk(input, 4))) // should return [[1,2,3],[4,5,6],[7,8],[9,10]]
-console.log(JSON.stringify(chunk(input, 7))) // should return [[1,2],[3,4],[5,6],[7],[8],[9],[10]]
-console.log(JSON.stringify(chunk(input, 8))) // should return [[1,2],[3,4],[5],[6],[7],[8],[9],[10]]
+chunk(input, 2) // should return [[1,2,3,4,5],[6,7,8,9,10]]
+chunk(input, 3) // should return [[1,2,3,4],[5,6,7],[8,9,10]]
+chunk(input, 4) // should return [[1,2,3],[4,5,6],[7,8],[9,10]]
+chunk(input, 7) // should return [[1,2],[3,4],[5,6],[7],[8],[9],[10]]
+chunk(input, 8) // should return [[1,2],[3,4],[5],[6],[7],[8],[9],[10]]
 
 
 /////////////////////////////////////////////////////////////////////
