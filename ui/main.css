@@ -1,0 +1,23 @@
+body {
+	padding-top: 60px;
+	padding-bottom: 10px;
+}
+.container {
+	max-width: 95%;
+}
+#chunks {
+	text-align: center;
+	width:500px;
+	height: 70px;
+	font-size:2em;
+	border-radius:8px;
+}
+img {
+  width: 90px;
+  height: auto;
+  border-radius: 50px;
+  padding: 5px;
+}
+#again{
+	padding-left: 40%;
+}
