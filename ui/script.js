@@ -28,7 +28,7 @@ $(function(){
   $('#chunks').on('keyup', function(e){
     if(e.keyCode === 13) {
       var groupNumbers = $(this).val();
-        var arrays = chunk(newInput, groupNumbers)
+        var arrays = chunk(newInput, groupNumbers);
         $("#chunks").fadeOut( "slow");
         $("#show").fadeOut( "slow");
         $("#again").show();

@@ -1,20 +1,20 @@
 function chunk(array,size) {
-  var mid = (array.length/size); var chunks = []; var start = 0
+  var mid = (array.length/size); var chunks = []; var start = 0;
   for(var i=0; i<size; i++) {
-    var last = Math.floor(start+mid)
-    if (array.length%size <= i) last = last-1
-    chunks.push(array.slice(start,Math.floor(last+1)))
-    start = Math.floor(last+1)
-	}
-  return chunks
-}
+    var last = Math.floor(start+mid);
+    if (array.length%size <= i) last = last-1;
+    chunks.push(array.slice(start,Math.floor(last+1)));
+    start = Math.floor(last+1);
+  };
+  return chunks;
+};
 
 var input = [1,2,3,4,5,6,7,8,9,10];
-chunk(input, 2) // should return [[1,2,3,4,5],[6,7,8,9,10]]
-chunk(input, 3) // should return [[1,2,3,4],[5,6,7],[8,9,10]]
-chunk(input, 4) // should return [[1,2,3],[4,5,6],[7,8],[9,10]]
-chunk(input, 7) // should return [[1,2],[3,4],[5,6],[7],[8],[9],[10]]
-chunk(input, 8) // should return [[1,2],[3,4],[5],[6],[7],[8],[9],[10]]
+chunk(input, 2); // should return [[1,2,3,4,5],[6,7,8,9,10]]
+chunk(input, 3); // should return [[1,2,3,4],[5,6,7],[8,9,10]]
+chunk(input, 4); // should return [[1,2,3],[4,5,6],[7,8],[9,10]]
+chunk(input, 7); // should return [[1,2],[3,4],[5,6],[7],[8],[9],[10]]
+chunk(input, 8); // should return [[1,2],[3,4],[5],[6],[7],[8],[9],[10]]
 
 
 /////////////////////////////////////////////////////////////////////
