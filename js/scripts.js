@@ -1,5 +1,5 @@
 function chunk(array,size) {
-  var mid = (array.length/size); var chunks = []; var start = 0;
+  var mid = (array.length/size), chunks = [], start = 0;
   for(var i=0; i<size; i++) {
     var last = Math.floor(start+mid);
     if (array.length%size <= i) last = last-1;
